@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titlePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarjeta de crédito o débito"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/labelNumeroTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Número de tarjeta"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePayment" />
+
+    <EditText
+        android:id="@+id/numeroTarjetaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="16"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/labelNumeroTarjeta" />
+
+    <TextView
+        android:id="@+id/labelFechaExpiracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de expiración"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/numeroTarjetaEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/fechaExpiracionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/labelFechaExpiracion">
+
+        <EditText
+            android:id="@+id/mesEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Mes"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/anioEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Año"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelCodigoSeguridad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código de seguridad"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/fechaExpiracionLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/codigoSeguridadEditText"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="cvv"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/labelCodigoSeguridad"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pagarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D32F2F"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:text="Pagar"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigoSeguridadEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
