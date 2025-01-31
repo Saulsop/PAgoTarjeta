@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 String codigoSeguridad = txtCodigoSeguridad.getText().toString();
 
                 // Mostrar un Toast con la información
-                String mensaje = "Número de tarjeta: " + numeroTarjeta ;
+                String mensaje = "Pagado con el numero de tarjeta  : " + numeroTarjeta ;
                 Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_LONG).show();
 
         });
